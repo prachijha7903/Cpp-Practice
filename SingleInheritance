@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+ 
+class Base{
+    public :
+    int a,b;
+    void input(){
+        cout<<"Enter 1st Num :";
+        cin>>a;
+        cout<<"Enter 2nd Num : ";
+        cin>>b;
+    }
+    void display(){
+        cout<<"a = "<<a<<endl;
+        cout<<"b= "<<b<<endl;
+    }
+};
+class Derived: public Base
+{
+    public :
+    int m,n;
+    void getdata(){
+        cout<<"Enter 1st Num :";
+        cin>>m;
+        cout<<"Enter 2nd Num : ";
+        cin>>n;
+    }
+    void showdata(){
+        cout<<"m = "<<m<<endl;
+        cout<<"n = "<<n<<endl;
+    }
+};
+int main(){
+    Derived ob;
+
+    ob.input();
+    ob.display();
+    ob.getdata();
+    ob.showdata();
+
+    return 0;
+}
