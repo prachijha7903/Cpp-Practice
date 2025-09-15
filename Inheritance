@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+
+class Father{
+    public :
+    string surname = "Upadhaya";
+};
+class son1 : public Father
+{
+    public: 
+    string name = "Keshav";
+    void show1(){
+        cout<<name<<" " <<surname<<endl;
+    }
+};
+class son2 : public Father
+{
+    public: 
+    string name = "Madhav";
+    void show2(){
+        cout<<name<<" " <<surname;
+    }
+};
+int main(){
+    son1 ob1;
+    ob1.show1();
+    son2 ob2;
+    ob2.show2();
+    return 0;
+}
