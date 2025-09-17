@@ -1,0 +1,50 @@
+#include<iostream>
+#include<string>
+using namespace std ;
+ 
+class Book{
+    public:
+    string title;
+    string author;
+    int price;
+    void input(){
+        cout<<"Enter Title= ";
+        cin>>title;
+        cout<<"Enter Author = ";
+        cin>>author;
+        cout<<"Enter Price = ";
+        cin>>price;
+    }
+    void display(){
+        cout<<"\nTitle ="<<title<<endl;
+        cout<<"Author ="<<author<<endl;
+        cout<<"Price = "<<price<<endl;
+    }
+   
+};
+class eBook:public Book{
+    public:
+    float file_size ;
+    string format;
+    void input1(){
+        cout<<"Enter ile size : ";
+        cin>>file_size;
+        cout<<"Enter format : ";
+        cin>>format;
+    }
+    void display1(){
+        cout<<"The file size is : "<<file_size<<endl ;
+        cout<<"format is: "<<"\n";
+
+       
+    }
+};
+int main(){
+    eBook ob;
+    ob.input();
+    ob.input1();
+   
+    ob.display();
+    ob.display1();
+    return 0;
+}
