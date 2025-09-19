@@ -1,0 +1,57 @@
+#include<iostream>
+#include<string>
+using namespace std ;
+ 
+class Vehicle{
+    public:
+    string name;
+    void input1(){
+        cout<<"Enter Name= ";
+        cin>>name;
+   
+    }
+    void display1(){
+        cout<<"\n";
+        cout<<"Name ="<<name;
+    }
+   
+};
+class Car: virtual public Vehicle{
+    public:
+    string college_name ;
+    int code;
+    void input2(){
+        cout<<"Enter car name : ";
+        cin>>college_name;
+        cout<<"Enter code : ";
+        cin>>code;
+    }
+    void display2(){
+        cout<<"The name of college is : "<<college_name ;
+        cout<<"code is: "<<code;
+}
+};
+class Bike : virtual public Vehicle{
+    public:
+    int No;
+    void input3(){
+        cout<<"Enter No of Bike : ";
+        cin>>No;
+    }
+    void display3(){
+        cout<<"No of Bike "<<No;
+}
+};
+int main(){
+    Car ob;
+    Bike ob1;
+    ob.input1();
+    ob.input2();
+    ob1.input3();
+
+    ob.display1();
+    ob.display2();
+    ob1.display3();
+
+   
+    return 0;
