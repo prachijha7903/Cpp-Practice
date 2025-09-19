@@ -1,0 +1,57 @@
+#include<iostream>
+#include<string>
+using namespace std ;
+ 
+class Sports{
+    public:
+    string name;
+    void input1(){
+        cout<<"Enter Name= ";
+        cin>>name;
+   
+    }
+    void display1(){
+        cout<<"\n";
+        cout<<"Name ="<<name;
+    }
+   
+};
+class Education{
+    public:
+    string college_name ;
+    int code;
+    void input2(){
+        cout<<"Enter college name : ";
+        cin>>college_name;
+        cout<<"Enter code : ";
+        cin>>code;
+    }
+    void display2(){
+        cout<<"The name of college is : "<<college_name ;
+        cout<<"code is: "<<code;
+}
+};
+class Student :public Sports,public Education{
+    public:
+    int NoOfStudent;
+    void input3(){
+        cout<<"Enter No of student : ";
+        cin>>NoOfStudent;
+    }
+    void display3(){
+        cout<<"NoOfStudent: "<<NoOfStudent;
+}
+};
+int main(){
+    Student ob;
+    ob.input1();
+    ob.input2();
+    ob.input3();
+
+    ob.display1();
+    ob.display2();
+    ob.display3();
+
+   
+    return 0;
+}
