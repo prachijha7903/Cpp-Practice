@@ -1,0 +1,49 @@
+#include <iostream>
+using namespace std;
+class Person{
+    public:
+    string name;
+    int age;
+    void displayPerson(){
+        cout<<endl<<"Name: "<<name<<endl<<"Age: "<<age;
+    }
+};
+class Student: virtual public Person{
+    public:
+    string course;
+    void displayStudent(){
+        cout<<endl<<"-----------------------Student-------------------------"<<endl<<"Name: "<<name<<endl<<"Age: "<<age<<endl<<"Course: "<<course;
+    }
+};
+class employee: virtual public Person{
+    public:
+    int salary;
+    void displayEmployee(){
+        cout<<endl<<"-----------------------Employee-------------------------"<<endl<<"Name: "<<name<<endl<<"Age: "<<age<<endl<<"Salary(in Rs.) : "<<salary;
+    }
+};
+class TeachingAssistant: public Student,public employee{
+    public:
+};
+class HeadTA: public TeachingAssistant{
+    public:
+    string responsibility;
+};
+int main() {
+    HeadTA ob,ob1;
+    cout<<"                      Student"<<endl<<"Enter Name: ";
+    cin>>ob.name;
+    cout<<endl<<"Enter Age: ";
+    cin>>ob.age;
+    cout<<endl<<"Enter Course: ";
+    cin>>ob.course;
+    cout<<"                      Employee"<<endl<<"Enter Name: ";
+    cin>>ob1.name;
+    cout<<endl<<"Enter Age: ";
+    cin>>ob1.age;
+    cout<<endl<<"Enter Salary: ";
+    cin>>ob1.salary;
+    ob.displayStudent();
+    ob1.displayEmployee();
+    return 0;
+}
