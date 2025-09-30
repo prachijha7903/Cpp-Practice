@@ -1,0 +1,80 @@
+#include <iostream>
+using namespace std;
+
+class Vehicle {
+protected:
+    string brand;
+    string model;
+
+public:
+    // pure virtual function = abstract class
+    virtual void rentalCost() = 0;  
+};
+
+class Car : virtual public Vehicle {
+public:
+    int days;
+    int ratePerDay;
+
+  void input(int a, int b) {
+        days = a;
+        ratePerDay = b;
+    }
+
+  void rentalCost() override {
+        cout << "Car Rent: " << (days * ratePerDay) << endl;
+    }
+};
+
+class Bike : virtual public Vehicle {
+public:
+    int hours;
+    int ratePerHour;
+
+  void input(int a, int b) {
+        hours = a;
+        ratePerHour = b;
+    }
+
+  void rentalCost() override {
+        cout << "Bike Rent: " << (hours * ratePerHour) << endl;
+    }
+};
+
+class Truck : virtual public Vehicle {
+public:
+    int distance;
+    int ratePerKm;
+
+  void input(int a, int b) {
+        distance = a;
+        ratePerKm = b;
+    }
+
+  void rentalCost() override {
+        cout << "Truck Rent: " << (distance * ratePerKm) << endl;
+    }
+};
+
+int main() {
+    Vehicle* p;  
+
+  Car C;
+  Bike B;
+  Truck T;
+
+  C.input(50, 10);
+    B.input(30, 15);
+    T.input(50, 20);
+
+  p = &C;
+  p->rentalCost();
+
+  p = &B;
+  p->rentalCost();
+
+  p = &T;
+  p->rentalCost();
+
+  return 0;
+}
