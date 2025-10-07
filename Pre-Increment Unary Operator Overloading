@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std ;
+
+class A{
+    int x;
+    public:
+    void input(int y){
+        x = y ;
+    }
+    A operator++(){
+        A a;
+        a.x = ++x;
+        return a;
+    }
+    void show(){
+        cout<<x;
+    }
+};
+
+int main(){
+    A ob ;
+    ob.input(6);
+    ++ob;
+    ob.show();
+    return 0;
+}
