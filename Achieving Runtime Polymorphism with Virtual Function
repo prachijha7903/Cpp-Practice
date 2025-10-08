@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+
+class base {
+    public:
+    virtual void show(){
+        cout<<"Base";
+    }
+};
+class derive : public base {
+    public:
+    void show(){
+        cout<<"Derived";
+    }
+};
+
+int main(){
+    base *p;
+    derive d ;
+    p = &d ;
+    p -> show();
+    return 0;
+}
