@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std ;
+
+int main(){
+    int a,b;
+    cout<<"Enter 2 numbers: ";
+    cin>>a>>b;
+    if(b == 0)
+     try{
+       throw 100;
+       cout<<a/b;
+    }
+    catch(int p){
+        cout<<p;
+        cout<<"Next code will be implemented" ;
+    }
+    else
+    cout<<a/b;
+    return 0;
+}
