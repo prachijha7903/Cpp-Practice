@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std ;
+
+class Vehicle{
+    public : 
+    Vehicle(){
+        cout<<"This is a Vehicle \n";
+    }
+};
+class FourWheeler{
+    public:
+    FourWheeler(){
+        cout<<"This is a Four Wheeler Vehicle\n";
+    }
+};
+class Car : public Vehicle, public FourWheeler {
+    public :
+    Car(){
+        cout<<"This is a Car\n";
+    }
+};
+
+int main(){
+    Car C ; // Creating the Object of derived class automatically call the Constructor of base classes
+    return 0;
+}
