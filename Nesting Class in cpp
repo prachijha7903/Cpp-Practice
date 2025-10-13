@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std ;
+
+class outer{
+    public :
+    int x = 10 ;
+    
+  class inner{
+        int x = 20;
+        public:
+        void show(){
+             cout<<x;
+        }
+    };
+};
+int main(){
+    outer ob1;
+    cout<<ob1.x;
+    outer::inner obj;
+    obj.show();
+    return 0;
+}
