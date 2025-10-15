@@ -1,0 +1,22 @@
+#include<iostream>    
+using namespace std ;
+
+class Flower{
+     public:
+     void Fragnance(){
+        cout<<"Smells sober\n";
+     }
+};
+class Rose : public Flower
+{
+    public: 
+    void Fragnance(){
+        cout<<"Smells Nice";
+    }
+};
+int main(){
+    Rose R;
+    R.Fragnance();  
+    R.Flower::Fragnance(); 
+    return 0;
+}
