@@ -1,0 +1,88 @@
+#include <iostream>
+using namespace std;
+
+class Vehicle {
+protected:
+    string brand;
+    string model;
+
+public:
+    // pure virtual function = abstract class
+    virtual void rentalCost() = 0;  
+};
+
+class Car : public Vehicle {
+public:
+    int days;
+    int ratePerDay;
+
+   void input() {
+        cout<<endl<<endl<<"Enter Details Here :"<<endl<<"Enter days : ";
+        cin>>days;
+        cout<<"Enter ratePerDay : ";
+        cin>>ratePerDay;
+    }
+
+  void rentalCost(){
+        cout <<endl<<endl<<"**********************";
+        cout << endl<<endl<<"Car Rent: " << (days * ratePerDay) << endl;
+    }
+};
+
+class Bike : public Vehicle {
+public:
+    int hours;
+    int ratePerHour;
+
+  void input() {
+        cout<<"Enter hours : ";
+        cin>>hours;
+        cout<<"Enter ratePerHour : ";
+        cin>>ratePerHour;
+    }
+
+  void rentalCost(){
+        cout << endl<<"Bike Rent: " << (hours * ratePerHour) << endl;
+    }
+};
+
+class Truck : public Vehicle {
+public:
+    int distance;
+    int ratePerKm;
+
+  void input() {
+        cout<<"Enter distance : ";
+        cin>>distance;
+        cout<<"Enter ratePerKm : ";
+        cin>>ratePerKm;
+    }
+
+  void rentalCost()
+    {
+                cout<<endl<< "Truck Rent: " << (distance * ratePerKm) << endl<<endl;
+                cout <<"**********************" <<endl<<endl;
+    }
+};
+int main() {
+    Vehicle* p;  
+
+  Car C;
+    Bike B;
+    Truck T;
+
+  C.input();
+    B.input();
+    T.input();
+
+  p = &C;
+    p->rentalCost();
+
+  p = &B;
+    p->rentalCost();
+
+  p = &T;
+    p->rentalCost();
+
+  return 0;
+}
