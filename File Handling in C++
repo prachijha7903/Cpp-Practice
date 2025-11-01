@@ -1,0 +1,15 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+int main(){
+     char S[100];
+     ofstream fwrite("FileH.txt");
+     fwrite<<"This file is opened Hello World";
+     fwrite.close();
+
+  ifstream fread("FileH.txt");
+     fread.getline(S,55);
+     cout<<S;
+     return 0;
+}
