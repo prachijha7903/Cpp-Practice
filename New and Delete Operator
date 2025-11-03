@@ -1,0 +1,11 @@
+#include<iostream>
+using namespace std;
+
+int main(){
+    int *ptr ;
+    ptr = new int ;
+    *ptr = 20 ;
+    cout<<"Value is : "<<*ptr ;
+    delete ptr;
+    return 0;
+}
