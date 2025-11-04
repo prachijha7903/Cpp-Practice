@@ -1,0 +1,12 @@
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    cout << "Current path: " << endl;
+
+  ofstream fout("zoom.txt");  
+    fout << "Hare Krsna";
+    fout<<"Hari bol";
+    fout.close();
+}
