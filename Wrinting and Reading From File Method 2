@@ -1,0 +1,23 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+int main(){
+    ofstream fout ;   
+    fout.open("Demo.txt");   
+    fout<<"Hare Krsna"; 
+    fout.close();
+
+  ifstream fin;
+    char ch;
+    fin.open("Demo.txt"); //opens file for reading from the file
+    fin>>ch;
+
+  while(!fin.eof())          //eof is the function which means end of file
+    {                          //This loop doesn't print the spaces present in the text of the file -> SOLUTION -> get() 
+        cout<<ch;
+        fin>>ch;
+    }
+    
+  return 0;
+}
