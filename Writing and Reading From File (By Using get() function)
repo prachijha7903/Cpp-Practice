@@ -1,0 +1,22 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+
+int main(){
+    ofstream fout;
+    fout.open("check.txt");
+    fout<<"Radhe Govinda" ;
+    fout.close();
+
+  ifstream fin;
+    char ch;
+    fin.open("check.txt");
+    ch = fin.get();
+
+  while(!fin.eof()){         
+        cout<<ch;
+        ch = fin.get();
+    }
+    
+  return 0;
+}
