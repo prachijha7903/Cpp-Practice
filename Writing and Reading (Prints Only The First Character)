@@ -1,0 +1,18 @@
+#include<iostream>              
+#include<fstream>
+using namespace std;     
+
+int main(){
+    ofstream fout ;    
+    fout.open("Demo.txt");    
+    fout<<"Hare Krsna"; 
+    fout.close();
+
+  ifstream fin;      
+    char ch;
+    fin.open("Demo.txt"); 
+    fin>>ch;                   
+
+  cout<<ch;                  
+    return 0;
+}
