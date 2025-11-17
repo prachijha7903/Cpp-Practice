@@ -1,0 +1,37 @@
+#include<iostream>
+using namespace std;    
+
+class Teacher{ 
+    private:
+    int salary;  
+
+  public:
+    string name;
+    string depart;
+
+  Teacher(string d){
+        depart = d;
+    }
+     Teacher(int s, string n, string d){
+        salary = s;
+        name = n;
+        depart = d;
+    }
+    
+  int setSalary(int s){
+        salary = s;
+    }
+   
+  int getSalary(){
+        return salary;
+    }
+};
+int main(){
+    Teacher T1("MCA");
+    Teacher T2(120000,"Govinda","BCA");
+
+  cout<<T1.depart;
+    cout<<T2.depart;
+    
+  return 0;
+}
