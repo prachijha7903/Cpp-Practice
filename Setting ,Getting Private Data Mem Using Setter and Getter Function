@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+
+class Teacher{         //Salary is private but we can access it using the setter we insert value into it and getter extract the value 
+    private:
+    int salary;  //We can indirectly access the private mem Salary using setter and getter func
+
+  public:
+    string name;
+    string depart;
+
+  void changeDepart(string d){
+        depart = d;
+    }
+    //Setter function   
+    int setSalary(int s){
+        salary = s;
+    }
+    //getter function  
+    int getSalary(){
+        return salary;
+    }
+};
+int main(){
+    Teacher T1;
+    T1.changeDepart("Btech");
+    cout<<T1.depart;
+    T1.depart = "Civil";
+    cout<<T1.depart;
+
+  T1.name = "Keshav";
+    T1.setSalary(40000);
+    cout<<T1.getSalary();
+    return 0;
+}
