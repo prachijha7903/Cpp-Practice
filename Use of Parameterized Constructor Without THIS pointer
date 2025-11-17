@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+class Account {
+public:
+    string password;
+    int accoundID;
+    string username;
+    string nameOfBank;
+
+    Account(string password, int accoundID, string username, string nameOfBank)
+        : password(password), accoundID(accoundID), username(username), nameOfBank(nameOfBank)                
+    {
+    }
+};
+
+int main(){
+    Account A("24bdfy", 70986, "Madhav", "Reserve Bank Of India");
+
+    cout << A.username << endl;
+    cout << A.nameOfBank << endl;
+}
