@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+
+class Cube{
+    public:
+    int side;
+    
+    void getSide(){
+        cout<<"Enter the side: ";
+        cin>>side;
+    }
+    int getVolume();
+};
+int Cube::getVolume(){
+    cout<<"Volume is : " <<side*side*side;
+}
+int main(){
+    Cube C1;
+    C1.getSide();
+    C1.getVolume();
+    return 0;
+}
