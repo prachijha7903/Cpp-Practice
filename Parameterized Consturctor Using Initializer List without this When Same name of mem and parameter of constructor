@@ -1,0 +1,23 @@
+// Parameterized Constructor Using Initializor List   : No need to use pointer "this" -> Used when the name of class members and parameters of constructor same
+#include<iostream>
+using namespace std;
+
+class Account {
+public:
+    string password;
+    int accoundID;
+    string username;
+    string nameOfBank;
+
+  Account(string password, int accoundID, string username, string nameOfBank)
+        : password(password), accoundID(accoundID), username(username), nameOfBank(nameOfBank)                // This is a professional way
+    {
+    }
+};
+
+int main(){
+    Account A("24bdfy", 70986, "Madhav", "Reserve Bank Of India");
+
+  cout << A.username << endl;
+    cout << A.nameOfBank << endl;
+}
