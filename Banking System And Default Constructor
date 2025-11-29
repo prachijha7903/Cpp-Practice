@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+
+class Account {
+    private :
+    double balance;
+    string password;
+
+  public:
+    int accoundID;
+    string username;
+    string nameOfBank;
+
+  Account(){
+        cout <<"hi , I am a Constructor and i get called each time when the object is being created\n";
+        nameOfBank = "Reserve Bank Of India";
+    }
+};
+
+int main(){
+    Account A;
+    Account A2;
+    cout<<A.nameOfBank<<endl;
+    cout<<A2.nameOfBank;
+
+  return 0;
+}
