@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+
+class Account {
+    public :
+    string password;
+
+  int accoundID;
+    string username;
+    string nameOfBank;
+
+  Account(string password, int accoundID, string username, string nameOfBank){
+        this->password = password ;         // Need to use pointer "this" -> Used when the name of class members and parameters of constructor same
+        this->accoundID = accoundID ;
+        this->username = username ;
+        this->nameOfBank = nameOfBank ;
+    }
+};
+
+int main(){
+    Account A("24bdfy",70986,"Madhav","Reserve Bank Of India");
+    cout<<A.username<<endl;        // output is not getting printed when we assign password = password and accountId = accountID
+    cout<<A.nameOfBank<<endl;
+
+   return 0;
+}
