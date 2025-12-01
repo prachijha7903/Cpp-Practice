@@ -1,0 +1,25 @@
+#include<iostream>   //This code will store the data of only one employee 
+using namespace std;// So we have the conceopt of array to store data of multiple employee
+
+class Flower{
+    public:
+    int id;
+    char name[20];
+    
+  void putdata(){
+        cout<<"Enter the id :";
+        cin>>id;
+        cout<<"Enter the name: ";
+        cin>>name;
+}
+    void getdata(){
+        cout<<"id is: "<<id;
+        cout<<"name is :"<<name;
+    }
+};
+int main(){
+    Flower F;
+    F.putdata();
+    F.getdata();
+    return 0;
+}
