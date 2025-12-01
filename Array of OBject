@@ -1,0 +1,37 @@
+#include<iostream>   //This code will store the data of only many employee 
+using namespace std;
+
+class Flower{
+    public:
+    int id;
+    char name[20];
+
+  void putdata(){
+        cout<<"Enter the id :";
+        cin>>id;
+        cout<<"Enter the name: ";
+        cin>>name;
+}
+  void getdata(){
+        cout<<endl<<"Id is: "<<id<<endl;
+        cout<<"Name is :"<<name<<endl<<endl;
+    }
+};
+
+int main(){
+    //Array of Object having max size 20
+    Flower F[20];
+    int n,i;
+    cout<<"Enter the size of array: ";
+    cin>>n;
+
+  for(i = 0 ; i <= n ; i++){
+        cout<<endl<<"Array at index "<<i<<" , ";
+           F[i].putdata();
+    }
+    for(i = 0 ; i <= n ; i++){
+        cout<<"Array at index "<<i<<" , ";
+           F[i].getdata();
+}
+    return 0;
+}
