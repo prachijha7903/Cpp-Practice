@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+class Student {
+    string name;
+    int marks;
+
+public:
+    // Constructor
+    Student(string n = "", int m = 0) {
+        name = n;
+        marks = m;
+    }
+
+  // Declare friend function
+    friend void highestMarks(Student s[], int size);
+};
+
+// Friend function definition
+void highestMarks(Student s[], int size) {
+    int maxMarks = s[0].marks;
+    int index = 0;
+
+  for (int i = 1; i < size; i++) {
+        if (s[i].marks > maxMarks) {
+            maxMarks = s[i].marks;
+            index = i;
+        }
+    }
+
+  cout << "\nTopper is: " << s[index].name
+         << " with " << s[index].marks << " marks.\n";
+}
+
+int main() {
+    // Array of objects
+    Student st[3] = {
+        Student("Ram", 78),
+        Student("Shyam", 85),
+        Student("Radha", 92)
+    };
+
+  highestMarks(st, 3);  // Friend function call
+
+   return 0;
+}
