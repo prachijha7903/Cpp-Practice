@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[] = {2, 4, 6, 8, 10};  // Sorted array
+    int n = 5;
+    int key = 6;
+
+    int low = 0;
+    int high = n - 1;
+    int mid;
+    bool found = false;
+
+    while (low <= high) {
+        mid = (low + high) / 2;
+
+        if (arr[mid] == key) {
+            cout << "Element " << key << " found at index " << mid;
+            found = true;
+            break;
+        }
+        else if (arr[mid] < key) {
+            low = mid + 1;
+        }
+        else {
+            high = mid - 1;
+        }
+    }
+
+    if (!found) {
+        cout << "Element not found";
+    }
+
+    return 0;
+}
