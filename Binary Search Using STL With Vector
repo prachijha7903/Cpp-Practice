@@ -1,0 +1,18 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    vector<int> v = {12, 14, 16, 18, 20};   // Sorted vector
+    int key = 14;
+
+    // Using STL binary_search
+    if (binary_search(v.begin(), v.end(), key)) {
+        cout << "Element " << key << " is found in the vector";
+    } else {
+        cout << "Element " << key << " is not found in the vector";
+    }
+
+    return 0;
+}
