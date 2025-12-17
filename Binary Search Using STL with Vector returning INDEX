@@ -1,0 +1,19 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+int main() {
+    vector<int> v = {12, 14, 16, 18, 20};
+    int key = 18;
+
+    auto it = lower_bound(v.begin(), v.end(), key);
+
+    if (it != v.end() && *it == key) {
+        cout << "Element found at index " << (it - v.begin());
+    } else {
+        cout << "Element not found";
+    }
+
+    return 0;
+}
