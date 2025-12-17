@@ -1,0 +1,20 @@
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main() {
+    map<int, string> student;
+
+    // Insert elements
+    student[101] = "Ram";
+    student[102] = "Shyam";
+    student[103] = "Radha";
+
+    if (student.count(103)) {
+    cout << "Key exists";
+     } else {
+    cout << "Key does not exist";
+    }
+
+    return 0;
+}
