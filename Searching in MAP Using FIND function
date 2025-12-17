@@ -1,0 +1,27 @@
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main() {
+    map<int, string> student;
+
+    // Insert elements
+    student[101] = "Ram";
+    student[102] = "Shyam";
+    student[103] = "Radha";
+
+    int key = 102;
+
+    // Searching using find()
+    auto it = student.find(key);
+
+    if (it != student.end()) {
+        cout << "Key found\n";
+        cout << "Roll No: " << it->first << endl;
+        cout << "Name: " << it->second;
+    } else {
+        cout << "Key not found";
+    }
+
+    return 0;
+}
