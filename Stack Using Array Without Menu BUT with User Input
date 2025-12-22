@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std;
+
+#define SIZE 5
+
+int stack[SIZE];
+int top = -1;
+
+// Push function
+void push(int value) {
+    if (top == SIZE - 1) {
+        cout << "Stack Overflow\n";
+    } else {
+        stack[++top] = value;
+    }
+}
+
+// Pop function
+void pop() {
+    if (top == -1) {
+        cout << "Stack Underflow\n";
+    } else {
+        cout << "Popped element: " << stack[top--] << endl;
+    }
+}
+
+// Display function
+void display() {
+    cout << "Stack elements: ";
+    for (int i = top; i >= 0; i--) {
+        cout << stack[i] << " ";
+    }
+    cout << endl;
+}
+
+int main() {
+    int n, value;
+
+    cout << "Enter number of elements to push (max 5): ";
+    cin >> n;
+
+    for (int i = 0; i < n; i++) {
+        cout << "Enter value: ";
+        cin >> value;
+        push(value);
+    }
+
+    display();
+
+    pop();     // one pop operation
+    display();
+
+    return 0;
+}
