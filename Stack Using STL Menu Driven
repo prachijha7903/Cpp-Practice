@@ -1,0 +1,68 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main() {
+    stack<int> s;
+    int choice, value;
+
+    do {
+        cout << "\n--- STACK MENU ---";
+        cout << "\n1. Push";
+        cout << "\n2. Pop";
+        cout << "\n3. Peek (Top)";
+        cout << "\n4. Display";
+        cout << "\n5. Exit";
+        cout << "\nEnter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                cout << "Enter value: ";
+                cin >> value;
+                s.push(value);
+                cout << "Element pushed successfully\n";
+                break;
+
+            case 2:
+                if (s.empty()) {
+                    cout << "Stack is empty (Underflow)\n";
+                } else {
+                    cout << "Popped element: " << s.top() << endl;
+                    s.pop();
+                }
+                break;
+
+            case 3:
+                if (s.empty()) {
+                    cout << "Stack is empty\n";
+                } else {
+                    cout << "Top element: " << s.top() << endl;
+                }
+                break;
+
+            case 4:
+                if (s.empty()) {
+                    cout << "Stack is empty\n";
+                } else {
+                    stack<int> temp = s;   // Copy stack
+                    cout << "Stack elements: ";
+                    while (!temp.empty()) {
+                        cout << temp.top() << " ";
+                        temp.pop();
+                    }
+                    cout << endl;
+                }
+                break;
+
+            case 5:
+                cout << "Exiting program...\n";
+                break;
+
+            default:
+                cout << "Invalid choice\n";
+        }
+    } while (choice != 5);
+
+    return 0;
+}
