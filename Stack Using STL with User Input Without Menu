@@ -1,0 +1,25 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main() {
+    stack<int> s;
+    int n, value;
+
+    cout << "Enter number of elements: ";
+    cin >> n;
+
+    for (int i = 0; i < n; i++) {
+        cout << "Enter value: ";
+        cin >> value;
+        s.push(value);
+    }
+
+    cout << "Stack elements: ";
+    while (!s.empty()) {
+        cout << s.top() << " ";
+        s.pop();
+    }
+
+    return 0;
+}
